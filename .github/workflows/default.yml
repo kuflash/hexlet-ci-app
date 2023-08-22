@@ -1,0 +1,12 @@
+name: default
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v3
+      - run: make setup
+      - run: make lint
+      - run: make test
